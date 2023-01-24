@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MoviesController!{% endblock %}
+{% block title %}Movies{% endblock %}
 
 {% block body %}
 <style>
@@ -12,7 +12,7 @@
     <h1>{{ title }}</h1>
     <ul>
         <li><strong>Released at: </strong> {{ releasedAt|format_date('full') }}</li>
-        <li><strong>Genres: </strong> {{ genres|join(',')}}</li>
+        <li><strong>Genres: </strong> {{ genres|join(', ')}}</li>
     </ul>
 </div>
 {% endblock %}

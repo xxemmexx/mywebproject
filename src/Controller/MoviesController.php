@@ -14,7 +14,7 @@ class MoviesController extends AbstractController
         'days' => ['Days', '2022-11-30', ['Drama', 'Romance']]
         ];
 
-    #[Route('/movies/{slug<[a-z0-9-]+>}', name: 'app_movies')]
+    #[Route('/movies/{slug<[a-z0-9-]+>}', name: 'app_movies', methods: ['GET'])]
     public function movieDetail(string $slug): Response
     {
         if(!isset(self::MOVIES[$slug])) {
